@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:elegantTextHeight="true"
+        android:ems="10"
+        android:fontFamily="serif-monospace"
+        android:inputType="textPersonName"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:text="A LITTLE PIECE OF ANGEL"
+        android:textAlignment="center"
+        android:textColor="@color/Yellow"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/buttonPlayBabble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"
+        android:onClick="playSoundBabble"
+        android:textStyle="normal"
+        android:text="Play BACKGROUND" />
+
+    <TextView
+        android:id="@+id/textviewNoiseTitle"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textTitle"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="64dp"
+
+        android:fontFamily="sans-serif-black"
+        android:text="BACKGROUND VOLUME"
+        android:textAlignment="center"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="79dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonPlayBabble"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="246dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/buttonZeroVol"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:onClick="setZeroVolumeButton"
+            android:text="0"
+            android:textSize="12dp" />
+
+
+        <RadioButton
+            android:id="@+id/buttonQuarterVol"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:onClick="setQuarterVolumeButton"
+            android:text="1/4"
+            android:textSize="12dp" />
+
+        <RadioButton
+            android:id="@+id/buttonHalfVol"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:onClick="setHalfVolumeButton"
+            android:text="1/2"
+            android:textSize="12dp" />
+
+        <RadioButton
+            android:id="@+id/button3quarterVol"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:onClick="setThreeQuarterVolumeButton"
+            android:text="3/4"
+            android:textSize="12dp" />
+
+        <RadioButton
+            android:id="@+id/buttonFullVol"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:onClick="setFullVolumeButton"
+            android:text="1"
+            android:textSize="18sp" />
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/buttonPlaySentence"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textTitle"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="11dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:onClick="playSoundSentence"
+        android:text="PLAY A NEW SENTENCE"
+        android:textAlignment="center" />
+
+    <RadioGroup
+        android:id="@+id/sentenceGroup"
+        android:layout_width="157dp"
+        android:layout_height="53dp"
+        android:layout_below="@id/buttonPlaySentence"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="21dp">
+
+
+        <RadioButton
+            android:id="@+id/normalSpeech"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:onClick="setNormalSpeech"
+            android:text="Normal" />
+
+        <RadioButton
+            android:id="@+id/slowSpeech"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setSlowSpeech"
+            android:text="Slow" />
+
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/noiseGroup"
+        android:layout_width="88dp"
+        android:layout_height="53dp"
+        android:layout_below="@id/buttonPlayBabble"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        android:layout_marginRight="200dp">
+
+
+        <RadioButton
+            android:id="@+id/babbleNoise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="setBabbleNoise"
+            android:text="Babble" />
+
+        <RadioButton
+            android:id="@+id/birdNoise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setBirdNoise"
+            android:text="Nature" />
+
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonRepeatSentence"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonPlaySentence"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="79dp"
+        android:layout_marginRight="19dp"
+        android:onClick="repeatSentence"
+        android:text="Repeat Sentence"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/buttonDisplaySentence"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonRepeatSentence"
+        android:layout_alignRight="@id/textviewNoiseTitle"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="19dp"
+        android:layout_marginRight="17dp"
+        android:onClick="displaySentence"
+        android:text="Display The Sentence"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/textviewTheSentence"
+        android:layout_width="408dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/radioGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="-10dp"
+        android:layout_marginRight="-10dp"
+        android:text="Please Select a New Sentence"
+        android:textAlignment="center"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/buttonHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@id/textviewTheSentence"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="76dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="179dp"
+        android:onClick="setHelpButton"
+        android:text="HELP" />
+
+    <Button
+        android:id="@+id/buttonAcknowledgement"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@id/textviewTheSentence"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="29dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="190dp"
+        android:onClick="setAcknowledgeButton"
+        android:text="Acknowledgement" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="20dp"
+        app:srcCompat="@drawable/logoverysmall" />
+
+
+</RelativeLayout>
